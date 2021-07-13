@@ -1,7 +1,10 @@
-from datetime import datetime,timedelta
+from datetime import datetime
 class MyGreeter:
+    def __init__(self,now=datetime.now()):
+        self.now=now
+        
     def Client(self):
-        n=datetime.now()
+        n=self.now
         if datetime(n.year,n.month,n.day,12,0,0,0) >= n and datetime(n.year,n.month,n.day,6,0,0,0) < n:
             return 'Good morning'
 
